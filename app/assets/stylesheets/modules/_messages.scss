@@ -6,35 +6,44 @@
   display: flex;
 }
 
-.Side-bar {
+.SideBar {
   width: 300px;
-  &__user-name {
+}
+
+.SideHeader{
     background-color: #253141;
     height: 100px;
     display: flex;
     align-self: center;
     justify-content: center;
-    &__name-icon {
-      background-color: #d8d8d8;
-      height: 20px;
-      width: 260px;
-      align-self: center;
-      margin: 0 20px 0 20px;
-      display: flex;
-      justify-content: space-between;
-      &__name {
-        
- 
-      }
-      &__icon {
-        width: 60px;
-      }
-    }
+  &__UserList {
+    background-color: #d8d8d8;
+    height: 20px;
+    width: 260px;
+    align-self: center;
+    margin: 0 20px 0 20px;
+    display: flex;
+    justify-content: space-between;
   }
-  &__group-list {
+  &__UserName {
+    
+  }
+  &__IconList {
+    display: flex;
+    justify-content: end;
+  }
+  &__IconGroup--btn {
+      margin-right: 5px;
+      color: #ffffff;
+  }
+  &__IconEdit--btn {
+    color: #ffffff;
+}
+}
+
+.SideGroup {
     background-color: #2f3e51;
     height:calc(100vh - 100px);
-  }
 }
 
 .Chat-main {

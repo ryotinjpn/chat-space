@@ -1,13 +1,14 @@
-.Side-bar
-  .Side-bar__user-name
-    .Side-bar__user-name__name-icon
-      .Side-bar__user-name__name-icon__name
+.SideBar
+  .SideHeader
+    .SideHeader__UserList
+      .SideHeader__UserName
         aaa
-      .Side-bar__user-name__name-icon__icon
-        = link_to "#", class: "Side-bar__user-name__name-icon__icon__btn-group" do
-          = icon('far', 'edit')
-          %span<>
-        = link_to "#", class: "Side-bar__user-name__name-icon__icon__btn-edit" do
-          = icon('fas', 'cog')
-  .Side-bar__group-list
+      .SideHeader__IconList
+        .SideHeader__Icons
+          = link_to "#", class: "SideHeader__IconGroup" do
+            = icon('far', 'edit', class: "SideHeader__IconGroup--btn")
+            %span<>
+          = link_to "#", class: "SideHeader__IconEdit" do
+            = icon('fas', 'cog', class: "SideHeader__IconEdit--btn")
+  .SideGroup
 
