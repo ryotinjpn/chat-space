@@ -1,6 +1,15 @@
-.Chat-main
-  .Chat-main__group-info
+.ChatMain
+  .ChatHeader
+    .ChatHeader__Left
+      .ChatHeader__Group
+        test
+      .ChatHeader__Member
+        Member : ryota
+    .ChatHeader__Rigth
+      .ChatHeader__EditOut
+        .ChatHeader__EditIn
+          = link_to "Edit", "#", class: "Editlink"
+  .ChatMessage
+    .ChatMessage__List
 
-  .Chat-main__message-list
-
-  .Chat-main__message-form
+  .ChatForm
