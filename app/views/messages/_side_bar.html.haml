@@ -1,5 +1,13 @@
 .Side-bar
   .Side-bar__user-name
-
+    .Side-bar__user-name__name-icon
+      .Side-bar__user-name__name-icon__name
+        aaa
+      .Side-bar__user-name__name-icon__icon
+        = link_to "#", class: "Side-bar__user-name__name-icon__icon__btn-group" do
+          = icon('far', 'edit')
+          %span<>
+        = link_to "#", class: "Side-bar__user-name__name-icon__icon__btn-edit" do
+          = icon('fas', 'cog')
   .Side-bar__group-list
 
