@@ -27,7 +27,8 @@
   }
   &__UserName {
     color: #ffffff;
-    
+    font-size: 16px;
+    font-weight: bold;
   }
   &__IconList {
     display: flex;
@@ -39,12 +40,27 @@
   }
   &__IconEdit--btn {
     color: #ffffff;
-}
+  }
 }
 
 .SideGroup {
     background-color: #2f3e51;
     height:calc(100vh - 100px);
+  &__List {
+    padding: 20px 20px 40px 20px;
+  }
+  &__User {
+    font-size: 15px;
+    color: #ffffff;
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+  &__Massage {
+    font-size: 11px;
+    color: #ffffff;
+    font-weight: bold;
+  }
+
 }
 
 .Chat-main {
