@@ -8,7 +8,7 @@
     .ChatHeader__Rigth
       .ChatHeader__EditOut
         .ChatHeader__EditIn
-          = link_to "Edit", "#", class: "Editlink"
+          = link_to "Edit", edit_group_path(current_user), class: "Editlink"
   .ChatMessage
     .ChatMessage__List
       .ChatMessage__NameDate

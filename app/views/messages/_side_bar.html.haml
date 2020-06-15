@@ -5,14 +5,16 @@
         = current_user.name
       .SideHeader__IconList
         .SideHeader__Icons
-          = link_to "#", class: "SideHeader__IconGroup" do
+          = link_to new_group_path, class: "SideHeader__IconGroup" do
             = icon('far', 'edit', class: "SideHeader__IconGroup--btn")
             %span<>
           = link_to edit_user_path(current_user), class: "SideHeader__IconEdit" do
             = icon('fas', 'cog', class: "SideHeader__IconEdit--btn")
   .SideGroup
-    .SideGroup__List
-      .SideGroup__User
-        techcanp
-      .SideGroup__Massage
-        まだメッセージありません
+    - current_user.groups.each do |group|
+      .SideGroup__List
+        = link_to '#' do
+          .SideGroup__User
+            = group.name
+          .SideGroup__Massage
+            まだメッセージありません
