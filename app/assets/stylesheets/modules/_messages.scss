@@ -2,7 +2,7 @@
   box-sizing: border-box;
 }
 
-.wrapper{
+.wrapper {
   display: flex;
 }
 
@@ -10,19 +10,18 @@
   width: 300px;
 }
 
-.SideHeader{
-    background-color: #253141;
-    height: 100px;
-    display: flex;
-    align-self: center;
-    justify-content: center;
+.SideHeader {
+  background-color: #253141;
+  height: 100px;
+  @include aligncenter;
+  justify-content: center;
   &__UserList {
     background-color: #253141;
     height: 20px;
     width: 260px;
-    align-self: center;
     margin: 0 20px 0 20px;
     display: flex;
+    align-items: center;
     justify-content: space-between;
   }
   &__UserName {
@@ -35,8 +34,9 @@
     justify-content: end;
   }
   &__IconGroup--btn {
-      margin-right: 5px;
-      color: #ffffff;
+    color: #ffffff;
+    margin-right: 5px;
+    
   }
   &__IconEdit--btn {
     color: #ffffff;
@@ -44,95 +44,128 @@
 }
 
 .SideGroup {
-    background-color: #2f3e51;
-    height:calc(100vh - 100px);
+  background-color: #2f3e51;
+  height:calc(100vh - 100px);
   &__List {
     padding: 20px 20px 40px 20px;
   }
   &__User {
     font-size: 15px;
     color: #ffffff;
-    font-weight: bold;
     margin-bottom: 5px;
   }
   &__Massage {
     font-size: 11px;
     color: #ffffff;
-    font-weight: bold;
   }
-
 }
 
 .ChatMain {
   width: calc(100vw - 300px);
 }
 
-.ChatHeader{
-    background-color: #ffffff;
-    height: 100px;
-    padding: 0 40px 0 40px;
+.ChatHeader {
+  background-color: #ffffff;
+  height: 100px;
+  padding: 0 40px 0 40px;
+  display: flex;
+  justify-content: space-between;
+  &__Group {
+    font-size: 20px;
+    color: #333333;
+    margin: 35px 0 15px 0;
+  }
+  &__Member {
+    font-size: 12px;
+    color: #999999;
+  }
+  &__EditOut {
+    width: 72px;
+    height: 40px;
+    margin: 28px 0 28px 0;
+    padding: 0 20px 0 20px;
+    @include aligncenter;
+    justify-content: center;
+    border: 1px solid #38aef0;
+  }
+  &__EditIn {
+    font-size: 16px;
+    .Editlink {
+      text-decoration: none;
+      color: #38aef0;
+    }
+  }
+}
+
+.ChatMessage {
+  background-color: #fafafa;
+  height:calc(100vh - 100px - 90px);
+  padding: 35px 0 0 40px;
+  &__List {
+    font-size: 20px;
+    color: #333333;
+    margin-bottom: 46px;
+  }
+  &__NameDate {
     display: flex;
-    justify-content: space-between;
-    &__Group {
-      font-size: 20px;
-      color: #333333;
-      margin: 35px 0 15px 0;
-    }
-    &__Member {
-      font-size: 12px;
-      color: #999999;
-    }
-    &__EditOut {
-      border: 1px solid #38aef0;
-      width: 72px;
-      height: 40px;
-      margin: 28px 0 28px 0;
-      padding: 0 20px 0 20px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-    &__EditIn {
-      font-size: 16px;
-      .Editlink{
-        text-decoration: none;
-        color: #38aef0;
-      }
-    }
+    margin-bottom: 12px;
+  }
+  &__Name {
+    font-size: 16px;
+    font-weight: bold;
+    color: #333333;
+  }
+  &__Date {
+    font-size: 12px;
+    color: #999999;
+  }
+  &__Comment {
+    font-size: 14px;
+    color: #434A54;
+    margin-bottom: 46px;
+  }
 }
 
-.ChatMessage{
-    background-color: #fafafa;
-    height:calc(100vh - 100px - 90px);
-    padding: 35px 0 0 40px;
-    &__List {
-      font-size: 20px;
-      color: #333333;
-      margin-bottom: 46px;
-    }
-    &__NameDate {
-      display: flex;
-      margin-bottom: 12px;
-    }
-    &__Name {
-      font-size: 16px;
-      font-weight: bold;
-      color: #333333;
-    }
-    &__Date {
-      font-size: 12px;
-      color: #999999;
-    }
-    &__Comment {
-      font-size: 14px;
-      color: #434A54;
-      margin-bottom: 46px;
-    }
+.ChatFooter {
+  background-color: #dddddd;
+  height: 90px;
+  @include aligncenter;
+  padding: 0 50px 0 40px;
 }
 
-
-
-.ChatForm{
-    background-color: #d2d2d2;
-    height: 90px;
+.Form {
+  display: flex;
+  width: 100%;
+  &__Content{
+    width: 100%;
+    height: 50px;
+    @include aligncenter;
+    position: relative;
+  }
+  &__Message {
+    height: 50px;
+    width: 100%;
+    padding-left: 15px;
+    border: 0;
+  }
+  &__Image {
+    position: absolute;
+    right: 10px;
+  }
+  &__Icon {
+    font-size: 25px;
+  }
+  &__File {
+    display: none;
+  }
+  &__Submit {
+    height: 50px;
+    width: 100px;
+    margin-left: 15px;
+    background-color: #38aef0;
+    color: #ffffff;
+    font-size: 16px;
+    padding: 0 30px;
+    border: 0;
+  }
 }

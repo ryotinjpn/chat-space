@@ -18,5 +18,11 @@
           2020年**月**日 **時**分
       .ChatMessage__Comment
         hello
-
-  .ChatForm
+  .ChatFooter
+    %form.Form
+      .Form__Content
+        %input{type: "text", class: "Form__Message", placeholder: "type a message"}
+        %label{class:"Form__Image"}
+          = icon('far', 'image',class: "Form__Icon")
+          %input{type: "file", class: "Form__File"}
+      %input{type: "submit", class: "Form__Submit", value: "Send"}
