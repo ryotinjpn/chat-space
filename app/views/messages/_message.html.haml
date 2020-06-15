@@ -1,0 +1,11 @@
+.ChatMessage__List
+  .ChatMessage__NameDate
+    .ChatMessage__Name
+      = message.user.name
+    .ChatMessage__Date
+      = message.created_at.strftime("%Y年%m月%d日 %H時%M分")
+  .ChatMessage__Comment
+    - if message.body.present?
+      %p.Message__content
+        = message.body
+    = image_tag message.image.url, class: 'Message__image' if message.image.present?
