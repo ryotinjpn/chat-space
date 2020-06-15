@@ -10,7 +10,7 @@
     .ChatHeader__Rigth
       .ChatHeader__EditOut
         .ChatHeader__EditIn
-          = link_to "Edit", edit_group_path(current_user), class: "Editlink"
+          = link_to "Edit", edit_group_path(@group.id), class: "Editlink"
   .ChatMessage
     = render @messages
   .ChatFooter
