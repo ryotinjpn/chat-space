@@ -1,0 +1,28 @@
+.ChatMain
+  .ChatHeader
+    .ChatHeader__Left
+      .ChatHeader__Group
+        test
+      .ChatHeader__Member
+        Member : ryota
+    .ChatHeader__Rigth
+      .ChatHeader__EditOut
+        .ChatHeader__EditIn
+          = link_to "Edit", "#", class: "Editlink"
+  .ChatMessage
+    .ChatMessage__List
+      .ChatMessage__NameDate
+        .ChatMessage__Name
+          ryota
+        .ChatMessage__Date
+          2020年**月**日 **時**分
+      .ChatMessage__Comment
+        hello
+  .ChatFooter
+    %form.Form
+      .Form__Content
+        %input{type: "text", class: "Form__Message", placeholder: "type a message"}
+        %label{class:"Form__Image"}
+          = icon('far', 'image',class: "Form__Icon")
+          %input{type: "file", class: "Form__File"}
+      %input{type: "submit", class: "Form__Submit", value: "Send"}
