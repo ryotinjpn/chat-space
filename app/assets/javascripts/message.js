@@ -55,6 +55,10 @@ $(function(){
       $('.ChatMessage').append(html);
       $('.ChatMessage').animate({ scrollTop: $('.ChatMessage')[0].scrollHeight});
       $('form')[0].reset();
+      $(".Form__Submit").prop("disabled", false);
     })
+    .fail(function() {
+      alert("メッセージ送信に失敗しました");
+  });
   });
 });
